@@ -85,6 +85,7 @@ function Login() {
     const { mutate: handleLogin, isLoading } = useMutation(
         async (data) => {
             const res = await login(data.email, data.password);
+            console.log(res.data);
             return res.data;
         },
         {
